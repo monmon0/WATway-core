@@ -7,19 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05C365EC2B6261BA00A1B2A6 /* WATway_coreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365EB2B6261BA00A1B2A6 /* WATway_coreApp.swift */; };
 		05C365EE2B6261BA00A1B2A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365ED2B6261BA00A1B2A6 /* ContentView.swift */; };
 		05C365F02B6261BB00A1B2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C365EF2B6261BB00A1B2A6 /* Assets.xcassets */; };
 		05C365F42B6261BB00A1B2A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C365F32B6261BB00A1B2A6 /* Preview Assets.xcassets */; };
+		05C365FF2B62627A00A1B2A6 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365FB2B62627A00A1B2A6 /* GuideView.swift */; };
+		05C366002B62627A00A1B2A6 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365FC2B62627A00A1B2A6 /* Footer.swift */; };
+		05C366012B62627A00A1B2A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365FD2B62627A00A1B2A6 /* HomeView.swift */; };
+		05C366022B62627A00A1B2A6 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365FE2B62627A00A1B2A6 /* Maps.swift */; };
+		05C366062B62633200A1B2A6 /* Components in Resources */ = {isa = PBXBuildFile; fileRef = 05C366052B62633200A1B2A6 /* Components */; };
+		05C366082B62635E00A1B2A6 /* WATway_coreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C366072B62635E00A1B2A6 /* WATway_coreApp.swift */; };
+		05D402362B62C86400C47949 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D402352B62C86400C47949 /* Launch Screen.storyboard */; };
+		05D402392B62CD1100C47949 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 05D402382B62CD1100C47949 /* Kingfisher */; };
+		05D4023B2B62D04500C47949 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4023A2B62D04500C47949 /* Steps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05C365E82B6261BA00A1B2A6 /* WATway-core.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WATway-core.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		05C365EB2B6261BA00A1B2A6 /* WATway_coreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATway_coreApp.swift; sourceTree = "<group>"; };
-		05C365ED2B6261BA00A1B2A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		05C365ED2B6261BA00A1B2A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../ContentView.swift; sourceTree = "<group>"; };
 		05C365EF2B6261BB00A1B2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05C365F12B6261BB00A1B2A6 /* WATway_core.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WATway_core.entitlements; sourceTree = "<group>"; };
 		05C365F32B6261BB00A1B2A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		05C365FB2B62627A00A1B2A6 /* GuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		05C365FC2B62627A00A1B2A6 /* Footer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
+		05C365FD2B62627A00A1B2A6 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		05C365FE2B62627A00A1B2A6 /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
+		05C366052B62633200A1B2A6 /* Components */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Components; sourceTree = "<group>"; };
+		05C366072B62635E00A1B2A6 /* WATway_coreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATway_coreApp.swift; sourceTree = "<group>"; };
+		05D402352B62C86400C47949 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		05D4023A2B62D04500C47949 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D402392B62CD1100C47949 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +68,10 @@
 		05C365EA2B6261BA00A1B2A6 /* WATway-core */ = {
 			isa = PBXGroup;
 			children = (
-				05C365EB2B6261BA00A1B2A6 /* WATway_coreApp.swift */,
-				05C365ED2B6261BA00A1B2A6 /* ContentView.swift */,
+				05C366052B62633200A1B2A6 /* Components */,
+				05C365FA2B62622D00A1B2A6 /* Model */,
 				05C365EF2B6261BB00A1B2A6 /* Assets.xcassets */,
+				05D402352B62C86400C47949 /* Launch Screen.storyboard */,
 				05C365F12B6261BB00A1B2A6 /* WATway_core.entitlements */,
 				05C365F22B6261BB00A1B2A6 /* Preview Content */,
 			);
@@ -67,6 +84,20 @@
 				05C365F32B6261BB00A1B2A6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		05C365FA2B62622D00A1B2A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05C366072B62635E00A1B2A6 /* WATway_coreApp.swift */,
+				05C365ED2B6261BA00A1B2A6 /* ContentView.swift */,
+				05C365FC2B62627A00A1B2A6 /* Footer.swift */,
+				05C365FB2B62627A00A1B2A6 /* GuideView.swift */,
+				05C365FD2B62627A00A1B2A6 /* HomeView.swift */,
+				05C365FE2B62627A00A1B2A6 /* Maps.swift */,
+				05D4023A2B62D04500C47949 /* Steps.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +116,9 @@
 			dependencies = (
 			);
 			name = "WATway-core";
+			packageProductDependencies = (
+				05D402382B62CD1100C47949 /* Kingfisher */,
+			);
 			productName = "WATway-core";
 			productReference = 05C365E82B6261BA00A1B2A6 /* WATway-core.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +147,9 @@
 				Base,
 			);
 			mainGroup = 05C365DF2B6261BA00A1B2A6;
+			packageReferences = (
+				05D402372B62CD1100C47949 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 05C365E92B6261BA00A1B2A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +166,8 @@
 			files = (
 				05C365F42B6261BB00A1B2A6 /* Preview Assets.xcassets in Resources */,
 				05C365F02B6261BB00A1B2A6 /* Assets.xcassets in Resources */,
+				05D402362B62C86400C47949 /* Launch Screen.storyboard in Resources */,
+				05C366062B62633200A1B2A6 /* Components in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C365FF2B62627A00A1B2A6 /* GuideView.swift in Sources */,
+				05D4023B2B62D04500C47949 /* Steps.swift in Sources */,
 				05C365EE2B6261BA00A1B2A6 /* ContentView.swift in Sources */,
-				05C365EC2B6261BA00A1B2A6 /* WATway_coreApp.swift in Sources */,
+				05C366022B62627A00A1B2A6 /* Maps.swift in Sources */,
+				05C366082B62635E00A1B2A6 /* WATway_coreApp.swift in Sources */,
+				05C366002B62627A00A1B2A6 /* Footer.swift in Sources */,
+				05C366012B62627A00A1B2A6 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05D402372B62CD1100C47949 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05D402382B62CD1100C47949 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05D402372B62CD1100C47949 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05C365E02B6261BA00A1B2A6 /* Project object */;
 }

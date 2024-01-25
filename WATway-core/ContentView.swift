@@ -8,15 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+ 
+        @State var showGuide: Bool = false
+        @State var showMenu: Bool = false
+      
+        
+        var body: some View {
+                VStack{
+
+                    MainPage()
+                    
+                    //Footer
+                    Divider()
+                    // hide wen the input its not put in yet
+                    Footer()
+                }
         }
-        .padding()
-    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
