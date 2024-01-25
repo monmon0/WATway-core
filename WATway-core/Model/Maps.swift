@@ -31,7 +31,6 @@ struct HamburgMenu: View {
             // pretty useful maybe can make it into instructions later
             VStack{
                 HStack {
-                 
                     Button {
                         
                     } label: {
@@ -46,8 +45,8 @@ struct HamburgMenu: View {
                         
                         
                         //                Text("Selected color: \(selection)")
-                    }.buttonStyle(.bordered)
-                }.padding()
+                    }.buttonStyle(.bordered).frame(width:500)
+                }.padding(.top, 50)
                 
                 Button {
                 } label: {
@@ -68,14 +67,14 @@ struct HamburgMenu: View {
              
                 
                 // Load and display an animated GIF using Kingfisher
-                KFImage(URL(string: "https://media3.giphy.com/media/XcZm6HPZJzoxlFJNiE/giphy.gif?cid=6c09b952lnjj9x2ii7m77re39hm32zn4oqbwduyfvhp6x7nb&ep=v1_stickers_related&rid=giphy.gif&ct=s")!).resizable().frame(width: 300, height: 300).scaledToFill()
+                KFImage(URL(string: "https://i.gifer.com/origin/f5/f5baef4b6b6677020ab8d091ef78a3bc.gif")!).resizable().frame(width: 300, height: 350).scaledToFit().padding()
 
 //                Spacer()
-                
+                // cycle through many messages
                 Text("Good morning today!").bold().padding()
                 Spacer()
 
-            }.padding(.top, 100)
+            }.padding()
 //            .navigationTitle(Text(title))
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
