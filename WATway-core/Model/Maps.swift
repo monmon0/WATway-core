@@ -19,12 +19,16 @@ struct HamburgMenu: View {
     
     // make  a list of selections seperately
     @State private var selection = "Where are you going?"
-       let colors = ["Where are you at?", "DC or somewhere", "Green", "Blue", "Black", "Tartan"]
+       let colors = ["Where are you at?", "DC (Ring Road/ Near E7)", "Green", "Blue", "Black", "Tartan"]
     
     @State private var destination = "Where are you going?"
        let des = ["Where are you heading?", "DC or somewhere", "Green", "Blue", "Black", "Tartan"]
     
+    // call function to get time here
+    @State private var time = "0"
+    
     @Binding var showGuideView: Bool
+   
     
     var body: some View {
         NavigationView {
@@ -41,11 +45,9 @@ struct HamburgMenu: View {
                                             Text($0)
                                         }
                                     }
-                                    .pickerStyle(.menu)
-                        
-                        
-                        //                Text("Selected color: \(selection)")
-                    }.buttonStyle(.bordered).frame(width:500)
+                        .pickerStyle(.menu).frame(maxWidth: .infinity)
+ 
+                    }.buttonStyle(.bordered).padding()
                 }.padding(.top, 50)
                 
                 Button {
@@ -54,25 +56,32 @@ struct HamburgMenu: View {
                    
                     Picker("Where are you going?", selection: $destination) {
                                     ForEach(des, id: \.self) {
-                                        Text($0)
+                                        Text($0).accentColor(Color.white)
                                     }
                                 }
-                                .pickerStyle(.menu)
-                    
-                    
-                    //                Text("Selected color: \(selection)")
-                }.frame(width:500).buttonStyle(.bordered)
+                    .pickerStyle(.menu).accentColor(Color.white).frame(maxWidth: .infinity)
+                }.buttonStyle(.borderedProminent)
                 
                 Spacer()
-             
+ 
+//                Text("Selected color: \(selection)")
+                
                 
                 // Load and display an animated GIF using Kingfisher
                 KFImage(URL(string: "https://i.gifer.com/origin/f5/f5baef4b6b6677020ab8d091ef78a3bc.gif")!).resizable().frame(width: 300, height: 350).scaledToFit().padding()
 
 //                Spacer()
                 // cycle through many messages
-                Text("Good morning today!").bold().padding()
+                Text("Good morning today! :3").bold().padding()
                 Spacer()
+                
+                //Footer
+                Divider()
+                
+                //call func here?
+                
+                // hide wen the input its not put in yet
+                Footer(location: $destination, time: $time)
 
             }.padding()
 //            .navigationTitle(Text(title))
@@ -84,7 +93,7 @@ struct HamburgMenu: View {
                             NotificationCenter.default.post(name: .displayBurgerMenu, object: nil)
                         }) {
                             
-                            Image(systemName: "menucard.fill").accentColor(Color.blue).font(.system(size: 20, weight: .regular))
+                            Image(systemName: "gearshape.fill").accentColor(Color.blue).font(.system(size: 20, weight: .regular))
                         }
                         
                         Spacer()
@@ -184,10 +193,3 @@ struct Hamburg_Previews: PreviewProvider {
     }
 }
 
-
-//                ForEach(0...20, id: \.self) { val in
-//                    NavigationLink(
-//                        destination: Text("Detail \(val)").navigationTitle(Text("Detail"))) {
-//                            Text("Go to \(val)")
-//                        }
-//                }

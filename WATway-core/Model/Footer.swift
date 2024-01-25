@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct Footer: View {
+    
+    @Binding var location: String
+    @Binding var time: String
+    
     var body: some View {
         VStack (){
             Capsule()
@@ -16,8 +20,8 @@ struct Footer: View {
                 .opacity(0.2).padding(.bottom, 10)
             HStack(spacing: 5){
                 
-                Text("DC (Ring Road / Near E7)")
-                Text("7 mins").bold()
+                Text(location)
+                Text(time + " mins").bold()
             }
             HStack {
                 Spacer()
@@ -37,6 +41,7 @@ struct Footer: View {
                     Text("Steps")
                 }.buttonStyle(.bordered)
                 
+                
                 Button () {
                     
                 } label: {
@@ -46,13 +51,15 @@ struct Footer: View {
             }
             Button{
             } label: {Text("See the whole layout")}
-        }.padding()
+        }
  
     }
 }
 
 struct footer_Previews: PreviewProvider {
+    @State static var location = "DC"
+    @State static var time = "7"
     static var previews: some View {
-        Footer().previewLayout(.fixed(width: 375, height: 80))
+        Footer(location: $location, time: $time).previewLayout(.fixed(width: 375, height: 80))
     }
 }
