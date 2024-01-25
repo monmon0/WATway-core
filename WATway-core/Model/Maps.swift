@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Foundation
-import Kingfisher
+import SDWebImageSwiftUI
 
 extension Notification.Name {
     static let displayBurgerMenu = Self.init("DisplayBurgerMenuNotification")
@@ -19,7 +19,7 @@ struct HamburgMenu: View {
     
     // make  a list of selections seperately
     @State private var selection = "Where are you going?"
-       let colors = ["Where are you at?", "DC (Ring Road/ Near E7)", "Green", "Blue", "Black", "Tartan"]
+       let colors = ["Where are you at?", "DC (Ring Road/ Near E7)", "MC", "SLC", "QNC", "Tartan"]
     
     @State private var destination = "Where are you going?"
        let des = ["Where are you heading?", "DC or somewhere", "Green", "Blue", "Black", "Tartan"]
@@ -66,9 +66,14 @@ struct HamburgMenu: View {
  
 //                Text("Selected color: \(selection)")
                 
-                
-                // Load and display an animated GIF using Kingfisher
-                KFImage(URL(string: "https://i.gifer.com/origin/f5/f5baef4b6b6677020ab8d091ef78a3bc.gif")!).resizable().frame(width: 300, height: 350).scaledToFit().padding()
+//
+                AnimatedImage(url: URL(string: "https://i.gifer.com/origin/f5/f5baef4b6b6677020ab8d091ef78a3bc.gif"))
+                       // Supports options and context, like `.progressiveLoad` for progressive animation loading
+                       .onFailure { error in
+                           // Error
+                       }
+                       .resizable() // Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size
+                       .placeholder(UIImage(systemName: "photo")).frame(width: 300, height: 350).scaledToFit().padding()
 
 //                Spacer()
                 // cycle through many messages

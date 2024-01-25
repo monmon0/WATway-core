@@ -45,7 +45,7 @@ struct Footer: View {
                 Button () {
                     
                 } label: {
-                    Image(systemName: "house.fill").font(.system(size: 34, weight: .regular))
+                    Image(systemName: "arrow.uturn.backward.circle.fill").font(.system(size: 34, weight: .regular))
                 }.padding()
            
             }

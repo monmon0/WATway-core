@@ -21,6 +21,7 @@
 		05D4023B2B62D04500C47949 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4023A2B62D04500C47949 /* Steps.swift */; };
 		05D4023D2B62F95200C47949 /* GuideComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4023C2B62F95200C47949 /* GuideComponents.swift */; };
 		05D4023F2B62F98A00C47949 /* HeaderComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4023E2B62F98A00C47949 /* HeaderComponents.swift */; };
+		05E335312B631C5500A89898 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 05E335302B631C5500A89898 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E335312B631C5500A89898 /* SDWebImageSwiftUI in Frameworks */,
 				05D402392B62CD1100C47949 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +126,7 @@
 			name = "WATway-core";
 			packageProductDependencies = (
 				05D402382B62CD1100C47949 /* Kingfisher */,
+				05E335302B631C5500A89898 /* SDWebImageSwiftUI */,
 			);
 			productName = "WATway-core";
 			productReference = 05C365E82B6261BA00A1B2A6 /* WATway-core.app */;
@@ -155,6 +158,7 @@
 			mainGroup = 05C365DF2B6261BA00A1B2A6;
 			packageReferences = (
 				05D402372B62CD1100C47949 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				05E3352F2B631C5500A89898 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 05C365E92B6261BA00A1B2A6 /* Products */;
 			projectDirPath = "";
@@ -412,6 +416,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		05E3352F2B631C5500A89898 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -419,6 +431,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 05D402372B62CD1100C47949 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		05E335302B631C5500A89898 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05E3352F2B631C5500A89898 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

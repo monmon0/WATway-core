@@ -14,7 +14,6 @@ struct ContentView: View {
                     MainPage()
                 }
         }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
