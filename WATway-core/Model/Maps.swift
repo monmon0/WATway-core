@@ -122,6 +122,7 @@ struct HamburgMenu: View {
                 }
             }
         }
+        .background(Color.yellow)
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
@@ -136,7 +137,7 @@ struct MainPage: View {
     var body: some View {
         
         HStack {
-            
+           
             ZStack {
                 if selectedMenuItem == 1 {
                     HamburgMenu(title: "Navigation 1", showGuideView: $showGuide)
@@ -186,9 +187,7 @@ struct MainPage: View {
             .onReceive(NotificationCenter.default.publisher(for: .displayBurgerMenu)) { _ in
                 isBurgerMenuDisplayed = true
             }
-        }
-        
-      
+        }.background(Color.yellow)
     }
 }
 
