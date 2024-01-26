@@ -14,10 +14,10 @@ struct Footer: View {
     
     var body: some View {
         VStack (){
-            Capsule()
-                .frame(width: 120, height: 6)
-                .foregroundColor(Color.secondary)
-                .opacity(0.2).padding(.bottom, 10)
+//            Capsule()
+//                .frame(width: 120, height: 6)
+//                .foregroundColor(Color.secondary)
+//                .opacity(0.2).padding(.bottom, 10)
             HStack(spacing: 5){
                 
                 Text(location)

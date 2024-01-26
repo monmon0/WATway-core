@@ -14,81 +14,110 @@ extension Notification.Name {
     static let hideBurgerMenu = Self.init("HideBurgerMenuNotification")
 }
 
+
+let backgroundGradient = Color.yellow
+
 struct HamburgMenu: View {
     var title: String = "Navigation"
     
     // make  a list of selections seperately
     @State private var selection = "Where are you going?"
-       let colors = ["Where are you at?", "DC (Ring Road/ Near E7)", "MC", "SLC", "QNC", "Tartan"]
+       let location = ["Where are you at?", "DC (Ring Road/ Near E7)", "MC", "SLC", "QNC", "Tartan"]
     
     @State private var destination = "Where are you going?"
        let des = ["Where are you heading?", "DC or somewhere", "Green", "Blue", "Black", "Tartan"]
-    
+
+  
+
     // call function to get time here
     @State private var time = "0"
     
     @Binding var showGuideView: Bool
+    
+    @State private var test1 = false
+    @State private var test2 = false
+//    @Binding var showDirections: Bool
    
     
     var body: some View {
         NavigationView {
             // pretty useful maybe can make it into instructions later
-            VStack{
-                HStack {
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "mappin.and.ellipse").font(.system(size: 20, weight: .regular)).accentColor(Color.blue)
-                       
-                        Picker("Where are you going?", selection: $selection) {
-                                        ForEach(colors, id: \.self) {
-                                            Text($0)
-                                        }
-                                    }
-                        .pickerStyle(.menu).frame(maxWidth: .infinity)
- 
-                    }.buttonStyle(.bordered).padding()
-                }.padding(.top, 50)
-                
-                Button {
-                } label: {
-                    Image(systemName: "location.circle.fill").font(.system(size: 20, weight: .regular)).accentColor(Color.blue)
+           
+            ZStack{
+                backgroundGradient
+                VStack{
                    
-                    Picker("Where are you going?", selection: $destination) {
-                                    ForEach(des, id: \.self) {
-                                        Text($0).accentColor(Color.white)
-                                    }
+                    HStack {
+    
+                        Button {
+                            test2 = true
+                        } label: {
+                            Image(systemName: "mappin.and.ellipse").font(.system(size: 20, weight: .regular)).accentColor(Color.black)
+                            
+                            Picker("Where are you going?", selection: $selection) {
+                                ForEach(location, id: \.self) {
+                                    Text($0).fontWeight(.bold)
                                 }
-                    .pickerStyle(.menu).accentColor(Color.white).frame(maxWidth: .infinity)
-                }.buttonStyle(.borderedProminent)
+                            }
+                            .pickerStyle(.menu).frame(maxWidth: .infinity)
+                            .accentColor(Color.white)
+                            
+                        }.buttonStyle(.borderedProminent).padding()
+                            .accentColor(Color.black)
+                          
+                            
+                    }.padding(.top, 110)
+                    
                 
-                Spacer()
- 
-//                Text("Selected color: \(selection)")
-                
-//
-                AnimatedImage(url: URL(string: "https://i.gifer.com/origin/f5/f5baef4b6b6677020ab8d091ef78a3bc.gif"))
-                       // Supports options and context, like `.progressiveLoad` for progressive animation loading
-                       .onFailure { error in
-                           // Error
-                       }
-                       .resizable() // Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size
-                       .placeholder(UIImage(systemName: "photo")).frame(width: 300, height: 350).scaledToFit().padding()
-
-//                Spacer()
-                // cycle through many messages
-                Text("Good morning today! :3").bold().padding()
-                Spacer()
-                
-                //Footer
-                Divider()
-                
-                //call func here?
-                
-                // hide wen the input its not put in yet
-                Footer(location: $destination, time: $time)
-
-            }.padding()
+                    
+                    Button {
+                        test1 = true
+                    } label: {
+                        Image(systemName: "location.circle.fill").font(.system(size: 20, weight: .regular)).accentColor(Color.black)
+                        
+                        Picker("Where are you heading?", selection: $destination) {
+                            ForEach(des, id: \.self) {
+                                Text($0)
+                            }
+                        }
+                        .pickerStyle(.menu)
+                        .accentColor(Color.white)
+                        .frame(maxWidth: .infinity)
+                        
+                    }.buttonStyle(.borderedProminent)
+                        .accentColor(Color.blue).padding()
+                    
+                    AnimatedImage(url: URL(string: "https://i.gifer.com/origin/f5/f5baef4b6b6677020ab8d091ef78a3bc.gif"))
+                    // Supports options and context, like `.progressiveLoad` for progressive animation loading
+                        .onFailure { error in
+                            // Error
+                        }
+                        .resizable()
+                        .placeholder(UIImage(systemName: "photo")).frame(width: 300, height: 350).scaledToFit().padding()
+                    
+                    //                Spacer()
+                    // cycle through many messages
+                    Text(test1 ? "Have a waddly good day!" : test2 ? "What's way you waddling today?": "Welcome").transition(.slide).bold().padding().background(Color.white)
+                        .cornerRadius(25)
+                    
+                    Spacer()
+                    //Footer
+                    // hide wen the input its not put in yet
+                    
+                    
+                    if test1 && test2 {
+                        VStack{
+                         Spacer()
+                         Footer(location: $destination, time:$time).padding() }
+                                               .background(Color.white)
+                                               .cornerRadius(25)
+                                               
+                                               .transition(.move(edge: .bottom))
+                        // make transition works
+                    }
+                }
+            }.ignoresSafeArea()
+        
 //            .navigationTitle(Text(title))
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -98,7 +127,7 @@ struct HamburgMenu: View {
                             NotificationCenter.default.post(name: .displayBurgerMenu, object: nil)
                         }) {
                             
-                            Image(systemName: "gearshape.fill").accentColor(Color.blue).font(.system(size: 20, weight: .regular))
+                            Image(systemName: "gearshape.fill").accentColor(Color.black).font(.system(size: 20, weight: .regular))
                         }
                         
                         Spacer()
@@ -122,7 +151,6 @@ struct HamburgMenu: View {
                 }
             }
         }
-        .background(Color.yellow)
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
@@ -131,6 +159,7 @@ struct MainPage: View {
     @State var isBurgerMenuDisplayed = false
     @State var selectedMenuItem = 1
     @State var showGuide = false
+    @State var showDirections = false
     
 //    @Binding var showGuideView: Bool
     
@@ -151,9 +180,7 @@ struct MainPage: View {
                         .foregroundColor(.black.opacity(isBurgerMenuDisplayed ? 0.5 : 0))
                         .animation(.easeOut(duration: 0.3))
                         .onTapGesture {
-                            NotificationCenter.default.post(name: .hideBurgerMenu, object: nil)
-                        }
-                    
+                            NotificationCenter.default.post(name: .hideBurgerMenu, object: nil)}
                     List {
                         Section(header: VStack {
                             Text("Menu")
