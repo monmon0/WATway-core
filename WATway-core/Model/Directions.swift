@@ -52,14 +52,17 @@ struct Directions: View {
                                 VStack{
                                     Spacer()
                                   
-                                    Image("DC").resizable().frame(maxHeight: 700).scaledToFit().cornerRadius(25).padding()
+                                    Image("DC").resizable().frame(maxHeight: 700).scaledToFit().cornerRadius(25)
                                     
                                     Spacer()
                                     
-                                    Text("Step \(val)").bold().transition(.slide).bold().padding().background(Color.white)
-                                        .cornerRadius(25)
-                                    
-                                    Text("\(val), Instructions blah blah Instructions blah blah Instructions blah blah Instructions blah blah").font(.title3).padding()
+                                    VStack{
+                                        Text("Step \(val)").bold().transition(.slide).bold().padding().background(Color.white)
+                                            .cornerRadius(25)
+                                        
+                                        Text("\(val), Instructions blah blah Instructions blah blah Instructions blah blah Instructions blah blah").font(.title3).padding()
+                                    }.padding()
+                                   
                                     
                                     if i != maxNum {
                                         Button{
