@@ -8,15 +8,13 @@
 
 import SwiftUI
 
-
-
+// TODO:
+// 1, fix guide, text, opening slogans
 struct ContentView: View {
         var body: some View {
-           
                 VStack{
                     MainPage()
                 }
-            
         }
 }
 

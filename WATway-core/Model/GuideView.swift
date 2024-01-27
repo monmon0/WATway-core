@@ -26,7 +26,7 @@ struct GuideView: View {
                 Spacer(minLength: 10)
                 
                 VStack(alignment: .leading, spacing: 25) {
-                    GuideComponents(title: "Undo", subtitle: "Press button", description: "This is a placeholder mf. Please just let the product live", icon: "arrow.uturn.backward.circle.fill")
+                    GuideComponents(title: "Directions", subtitle: "Press button", description: "This is a placeholder mf. Please just let the product live", icon: "arrow.uturn.backward.circle.fill")
                     
                     GuideComponents(title: "Dislike", subtitle: "Swipe Left", description: "This is a placeholder mf. Please just let the product live", icon: "x.circle")
                     

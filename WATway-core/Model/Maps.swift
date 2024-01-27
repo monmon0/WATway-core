@@ -14,20 +14,17 @@ extension Notification.Name {
     static let hideBurgerMenu = Self.init("HideBurgerMenuNotification")
 }
 
-
-let backgroundGradient = Color.yellow
+let backgroundVar = Color.yellow
 
 struct HamburgMenu: View {
     var title: String = "Navigation"
     
     // make  a list of selections seperately
     @State private var selection = "Where are you going?"
-       let location = ["Where are you at?", "DC (Ring Road/ Near E7)", "MC", "SLC", "QNC", "Tartan"]
+       let location = ["Where are you at?", "DC (Ring Road/ Near E7)", "MC", "SLC", "QNC", "E7(Ring Road)"]
     
     @State private var destination = "Where are you going?"
-       let des = ["Where are you heading?", "DC or somewhere", "Green", "Blue", "Black", "Tartan"]
-
-  
+       let des = ["Where are you heading?", "DC (Ring Road/ Near E7)", "MC", "SLC", "QNC", "E7(Ring Road)"]
 
     // call function to get time here
     @State private var time = "0"
@@ -38,19 +35,17 @@ struct HamburgMenu: View {
     @State private var test2 = false
 //    @Binding var showDirections: Bool
    
-    
     var body: some View {
         NavigationView {
             // pretty useful maybe can make it into instructions later
-           
             ZStack{
-                backgroundGradient
+                backgroundVar
                 VStack{
-                   
                     HStack {
-    
                         Button {
-                            test2 = true
+                            withAnimation{
+                                test2 = true
+                            }
                         } label: {
                             Image(systemName: "mappin.and.ellipse").font(.system(size: 20, weight: .regular)).accentColor(Color.black)
                             
@@ -64,14 +59,14 @@ struct HamburgMenu: View {
                             
                         }.buttonStyle(.borderedProminent).padding()
                             .accentColor(Color.black)
-                          
-                            
                     }.padding(.top, 110)
                     
-                
-                    
-                    Button {
-                        test1 = true
+
+                    Button{
+                        withAnimation{
+                            test1 = true
+                        }
+                        
                     } label: {
                         Image(systemName: "location.circle.fill").font(.system(size: 20, weight: .regular)).accentColor(Color.black)
                         
@@ -113,6 +108,7 @@ struct HamburgMenu: View {
                                                .cornerRadius(25)
                                                
                                                .transition(.move(edge: .bottom))
+                        
                         // make transition works
                     }
                 }
@@ -122,7 +118,7 @@ struct HamburgMenu: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     
-                    HStack (spacing: 50){
+                    HStack (alignment: .center, spacing: 80){
                         Button(action: {
                             NotificationCenter.default.post(name: .displayBurgerMenu, object: nil)
                         }) {
@@ -130,17 +126,17 @@ struct HamburgMenu: View {
                             Image(systemName: "gearshape.fill").accentColor(Color.black).font(.system(size: 20, weight: .regular))
                         }
                         
-                        Spacer()
+                        
                         // change font or replace w logo
                         Text("WATway").frame(maxWidth: .infinity, alignment: .center).accentColor(Color.black).font(.largeTitle) .fontWeight(.bold)
                 
-                        
+//                        Spacer()
                         Button{
                             //Action
                             self.showGuideView.toggle()
                         } label: {
                             Image(systemName: "info.circle").font(.system(size: 20, weight: .regular))
-                        }.accentColor(Color.gray)
+                        }.accentColor(Color.black)
                             .sheet(isPresented: $showGuideView) {
                             GuideView()
                         }
@@ -152,6 +148,7 @@ struct HamburgMenu: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
+
     }
 }
 
@@ -214,7 +211,7 @@ struct MainPage: View {
             .onReceive(NotificationCenter.default.publisher(for: .displayBurgerMenu)) { _ in
                 isBurgerMenuDisplayed = true
             }
-        }.background(Color.yellow)
+        }.background(Color.yellow).ignoresSafeArea()
     }
 }
 

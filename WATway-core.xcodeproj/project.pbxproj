@@ -14,13 +14,15 @@
 		05C366002B62627A00A1B2A6 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365FC2B62627A00A1B2A6 /* Footer.swift */; };
 		05C366012B62627A00A1B2A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365FD2B62627A00A1B2A6 /* HomeView.swift */; };
 		05C366022B62627A00A1B2A6 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365FE2B62627A00A1B2A6 /* Maps.swift */; };
-		05C366062B62633200A1B2A6 /* Components in Resources */ = {isa = PBXBuildFile; fileRef = 05C366052B62633200A1B2A6 /* Components */; };
 		05C366082B62635E00A1B2A6 /* WATway_coreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C366072B62635E00A1B2A6 /* WATway_coreApp.swift */; };
 		05D402362B62C86400C47949 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D402352B62C86400C47949 /* Launch Screen.storyboard */; };
 		05D402392B62CD1100C47949 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 05D402382B62CD1100C47949 /* Kingfisher */; };
-		05D4023B2B62D04500C47949 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4023A2B62D04500C47949 /* Steps.swift */; };
+		05D4023B2B62D04500C47949 /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4023A2B62D04500C47949 /* Directions.swift */; };
 		05D4023D2B62F95200C47949 /* GuideComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4023C2B62F95200C47949 /* GuideComponents.swift */; };
 		05D4023F2B62F98A00C47949 /* HeaderComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4023E2B62F98A00C47949 /* HeaderComponents.swift */; };
+		05DD5B1C2B6578BF0042F641 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD5B1B2B6578BF0042F641 /* SideMenu.swift */; };
+		05DD5B1E2B6578C30042F641 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD5B1D2B6578C30042F641 /* SideMenuView.swift */; };
+		05DD5B202B657A370042F641 /* HeaderNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD5B1F2B657A370042F641 /* HeaderNav.swift */; };
 		05E335312B631C5500A89898 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 05E335302B631C5500A89898 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
@@ -34,12 +36,14 @@
 		05C365FC2B62627A00A1B2A6 /* Footer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
 		05C365FD2B62627A00A1B2A6 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		05C365FE2B62627A00A1B2A6 /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
-		05C366052B62633200A1B2A6 /* Components */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Components; sourceTree = "<group>"; };
 		05C366072B62635E00A1B2A6 /* WATway_coreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATway_coreApp.swift; sourceTree = "<group>"; };
 		05D402352B62C86400C47949 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		05D4023A2B62D04500C47949 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
+		05D4023A2B62D04500C47949 /* Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
 		05D4023C2B62F95200C47949 /* GuideComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideComponents.swift; sourceTree = "<group>"; };
 		05D4023E2B62F98A00C47949 /* HeaderComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponents.swift; sourceTree = "<group>"; };
+		05DD5B1B2B6578BF0042F641 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		05DD5B1D2B6578C30042F641 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		05DD5B1F2B657A370042F641 /* HeaderNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderNav.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,7 @@
 		05C365EA2B6261BA00A1B2A6 /* WATway-core */ = {
 			isa = PBXGroup;
 			children = (
-				05C366052B62633200A1B2A6 /* Components */,
+				05DD5B1A2B65789B0042F641 /* Components */,
 				05C365FA2B62622D00A1B2A6 /* Model */,
 				05C365EF2B6261BB00A1B2A6 /* Assets.xcassets */,
 				05D402352B62C86400C47949 /* Launch Screen.storyboard */,
@@ -98,14 +102,24 @@
 				05C366072B62635E00A1B2A6 /* WATway_coreApp.swift */,
 				05C365ED2B6261BA00A1B2A6 /* ContentView.swift */,
 				05C365FC2B62627A00A1B2A6 /* Footer.swift */,
-				05D4023E2B62F98A00C47949 /* HeaderComponents.swift */,
-				05D4023C2B62F95200C47949 /* GuideComponents.swift */,
 				05C365FB2B62627A00A1B2A6 /* GuideView.swift */,
 				05C365FD2B62627A00A1B2A6 /* HomeView.swift */,
 				05C365FE2B62627A00A1B2A6 /* Maps.swift */,
-				05D4023A2B62D04500C47949 /* Steps.swift */,
+				05D4023A2B62D04500C47949 /* Directions.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		05DD5B1A2B65789B0042F641 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				05DD5B1B2B6578BF0042F641 /* SideMenu.swift */,
+				05DD5B1D2B6578C30042F641 /* SideMenuView.swift */,
+				05D4023C2B62F95200C47949 /* GuideComponents.swift */,
+				05D4023E2B62F98A00C47949 /* HeaderComponents.swift */,
+				05DD5B1F2B657A370042F641 /* HeaderNav.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +191,6 @@
 				05C365F42B6261BB00A1B2A6 /* Preview Assets.xcassets in Resources */,
 				05C365F02B6261BB00A1B2A6 /* Assets.xcassets in Resources */,
 				05D402362B62C86400C47949 /* Launch Screen.storyboard in Resources */,
-				05C366062B62633200A1B2A6 /* Components in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,12 +202,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				05C365FF2B62627A00A1B2A6 /* GuideView.swift in Sources */,
-				05D4023B2B62D04500C47949 /* Steps.swift in Sources */,
+				05D4023B2B62D04500C47949 /* Directions.swift in Sources */,
 				05C365EE2B6261BA00A1B2A6 /* ContentView.swift in Sources */,
 				05D4023F2B62F98A00C47949 /* HeaderComponents.swift in Sources */,
+				05DD5B202B657A370042F641 /* HeaderNav.swift in Sources */,
+				05DD5B1E2B6578C30042F641 /* SideMenuView.swift in Sources */,
 				05C366022B62627A00A1B2A6 /* Maps.swift in Sources */,
 				05D4023D2B62F95200C47949 /* GuideComponents.swift in Sources */,
 				05C366082B62635E00A1B2A6 /* WATway_coreApp.swift in Sources */,
+				05DD5B1C2B6578BF0042F641 /* SideMenu.swift in Sources */,
 				05C366002B62627A00A1B2A6 /* Footer.swift in Sources */,
 				05C366012B62627A00A1B2A6 /* HomeView.swift in Sources */,
 			);
