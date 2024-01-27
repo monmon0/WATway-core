@@ -16,83 +16,86 @@ struct Directions: View {
     @State private var maxNum = 5
     
     var body: some View {
-        ZStack{
-            backgroundVar
-            VStack (alignment: .center){
-                Header(showGuideView: $showView).padding().frame(minHeight: 100)
-                
-                ScrollView(showsIndicators: false){
+        
+        NavigationView{
+            ZStack{
+                backgroundVar
+                VStack (alignment: .center){
+                    Header(showGuideView: $showView).padding().frame(minHeight: 100)
                     
-                    HStack{
-                        Button{
-//                            withAnimation{
-//                                i = i - 1
-//                            }
-                        } label:{
-                            Text("See Steps instead")
-                        }.buttonStyle(.bordered)
-                
-                        if(i != 1){
+                    ScrollView(showsIndicators: false){
+                        HStack{
+                        if(i != 1 && i != maxNum){
                             Button{
-                                withAnimation{
-                                    i = i - 1
-                                }
+    //                            withAnimation{
+    //                                i = i - 1
+    //                            }
                             } label:{
-                                Text("See Previous")
-                            }.buttonStyle(.borderedProminent)
-                        }
-                    }
+                                Text("See Steps instead")
+                            }.buttonStyle(.bordered)
                     
-                    
-                    Spacer()
-                    
-                    ForEach(i...maxNum, id: \.self) { val in
-                            VStack{
-                                Spacer()
-                              
-                                Image("DC").resizable().frame(maxHeight: 700).scaledToFit().cornerRadius(25).padding()
-                                
-                                Spacer()
-                                
-                                Text("Step \(val)").bold().transition(.slide).bold().padding().background(Color.white)
-                                    .cornerRadius(25)
-                                
-                                Text("\(val), Instructions blah blah Instructions blah blah Instructions blah blah Instructions blah blah").font(.title3).padding()
-                                
+            
                                 Button{
-                                    if i < maxNum {
-                                        withAnimation{
-                                            i = i + 1
-                                        }
+                                    withAnimation{
+                                        i = i - 1
                                     }
-                                    
-                                   
                                 } label:{
-                                    Text("🤗 I'm Here! ").font(.title).bold().padding()
+                                    Text("See Previous")
                                 }.buttonStyle(.borderedProminent)
-                                .accentColor(Color.black).padding()
-                                Spacer()
-                           
-                            }.padding()
-                        }
-                    
-                    Spacer()
-                    
-         
-                        Text("You made it!")
-                        AnimatedImage(url: URL(string: "https://media.tenor.com/PCAmJikdf9MAAAAi/goose.gif"))
-                            .onFailure { error in
-                                // Error
                             }
-                            .resizable()
-                            .placeholder(UIImage(systemName: "photo")).frame(width: 200, height: 250).scaledToFit().padding()
-                    
-                    
-                    
-    
-                }
-            }.padding()
-        }.ignoresSafeArea()
+                        }
+                        
+                        
+                        Spacer()
+                        
+                        ForEach(i...maxNum, id: \.self) { val in
+                                VStack{
+                                    Spacer()
+                                  
+                                    Image("DC").resizable().frame(maxHeight: 700).scaledToFit().cornerRadius(25).padding()
+                                    
+                                    Spacer()
+                                    
+                                    Text("Step \(val)").bold().transition(.slide).bold().padding().background(Color.white)
+                                        .cornerRadius(25)
+                                    
+                                    Text("\(val), Instructions blah blah Instructions blah blah Instructions blah blah Instructions blah blah").font(.title3).padding()
+                                    
+                                    if i != maxNum {
+                                        Button{
+                                                withAnimation{
+                                                    i = i + 1
+                                            }
+                                        } label:{
+                                            Text("🤗 I'm Here! ").font(.title).bold().padding()
+                                        }.buttonStyle(.borderedProminent)
+                                            .accentColor(Color.black).padding()
+                                    }
+                                    Spacer()
+                                        
+                               
+                                }.padding()
+                            }
+                        
+                        Spacer()
+                        
+             
+                            Text("You made it!")
+                            AnimatedImage(url: URL(string: "https://media.tenor.com/PCAmJikdf9MAAAAi/goose.gif"))
+                                .onFailure { error in
+                                    // Error
+                                }
+                                .resizable()
+                                .placeholder(UIImage(systemName: "photo")).frame(width: 200, height: 250).scaledToFit().padding()
+                        
+                        
+                        
+        
+                    }
+                }.padding()
+            }.ignoresSafeArea()
+        }.navigationBarHidden(true)
+        
     }
 }
 

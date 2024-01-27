@@ -12,9 +12,12 @@ import SwiftUI
 // 1, fix guide, text, opening slogans
 struct ContentView: View {
         var body: some View {
+            NavigationView{
                 VStack{
                     MainPage()
                 }
+            }.toolbar(.hidden, for: .navigationBar)
+                
         }
 }
 

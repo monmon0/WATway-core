@@ -12,6 +12,10 @@ struct Footer: View {
     @Binding var location: String
     @Binding var time: String
     
+    @State private var openDirections: Bool = false
+    @State private var showView: Bool = false
+    
+
     var body: some View {
         VStack (){
 //            Capsule()
@@ -26,11 +30,17 @@ struct Footer: View {
             HStack {
                 Spacer()
             
+                NavigationLink("",destination: Directions(showView: $showView), isActive: $openDirections).navigationBarHidden(true).navigationBarTitle("")
+                
                 Button () {
-                    
+                    withAnimation{
+                        openDirections = true
+                    }
                 } label: {
                     Image(systemName: "arrow.triangle.turn.up.right.diamond.fill").font(.system(size: 34, weight: .regular))
                     Text("Directions")
+                    
+                    
                 }.buttonStyle(.bordered)
                 
                 Spacer()
