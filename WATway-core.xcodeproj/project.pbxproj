@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05925E3A2B677184008E7E22 /* EffectsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 05925E392B677184008E7E22 /* EffectsLibrary */; };
 		05C365EE2B6261BA00A1B2A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365ED2B6261BA00A1B2A6 /* ContentView.swift */; };
 		05C365F02B6261BB00A1B2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C365EF2B6261BB00A1B2A6 /* Assets.xcassets */; };
 		05C365F42B6261BB00A1B2A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C365F32B6261BB00A1B2A6 /* Preview Assets.xcassets */; };
@@ -53,6 +54,7 @@
 			files = (
 				05E335312B631C5500A89898 /* SDWebImageSwiftUI in Frameworks */,
 				05D402392B62CD1100C47949 /* Kingfisher in Frameworks */,
+				05925E3A2B677184008E7E22 /* EffectsLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +143,7 @@
 			packageProductDependencies = (
 				05D402382B62CD1100C47949 /* Kingfisher */,
 				05E335302B631C5500A89898 /* SDWebImageSwiftUI */,
+				05925E392B677184008E7E22 /* EffectsLibrary */,
 			);
 			productName = "WATway-core";
 			productReference = 05C365E82B6261BA00A1B2A6 /* WATway-core.app */;
@@ -173,6 +176,7 @@
 			packageReferences = (
 				05D402372B62CD1100C47949 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				05E3352F2B631C5500A89898 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				05925E382B677183008E7E22 /* XCRemoteSwiftPackageReference "effects-library" */,
 			);
 			productRefGroup = 05C365E92B6261BA00A1B2A6 /* Products */;
 			projectDirPath = "";
@@ -424,6 +428,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		05925E382B677183008E7E22 /* XCRemoteSwiftPackageReference "effects-library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GetStream/effects-library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		05D402372B62CD1100C47949 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -443,6 +455,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		05925E392B677184008E7E22 /* EffectsLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05925E382B677183008E7E22 /* XCRemoteSwiftPackageReference "effects-library" */;
+			productName = EffectsLibrary;
+		};
 		05D402382B62CD1100C47949 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 05D402372B62CD1100C47949 /* XCRemoteSwiftPackageReference "Kingfisher" */;
