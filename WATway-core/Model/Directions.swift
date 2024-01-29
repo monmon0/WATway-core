@@ -100,16 +100,16 @@ struct Directions: View {
                                     }
                                     
                                     
-//                                    if i != maxNum {
-//                                        Button{
-//                                            withAnimation{
-//                                                i = i + 1
-//                                            }
-//                                        } label:{
-//                                            Text("🤗 I'm Here! ").font(.title).bold().padding()
-//                                        }.buttonStyle(.borderedProminent)
-//                                            .accentColor(Color.black).padding()
-//                                    }
+                                    if i != maxNum {
+                                        Button{
+                                            withAnimation{
+                                                i = i + 1
+                                            }
+                                        } label:{
+                                            Text("🤗 I'm Here! 🤗").bold().padding()
+                                        }.buttonStyle(.borderedProminent)
+                                            .accentColor(Color.black).padding()
+                                    }
                                     Spacer()
                                     
                                     
