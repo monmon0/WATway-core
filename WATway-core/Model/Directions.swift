@@ -16,6 +16,7 @@ struct Directions: View {
     @State private var i = 1
     @State private var maxNum = 5
     @State private var time = 7
+    @State private var exitPath: Bool = false
     
     var body: some View {
         
@@ -35,8 +36,12 @@ struct Directions: View {
                         
                         if (i != maxNum){
                             HStack{
+                                
+                                NavigationLink("",destination: ContentView(), isActive: $exitPath).navigationBarHidden(true).navigationBarTitle("")
+                                
+                                
                                 Button{
-                                    
+                                    self.exitPath.toggle()
                                 } label: {
                                     Text("Exit Path").font(.title2)
                                 }.buttonStyle(.bordered).tint(.pink)

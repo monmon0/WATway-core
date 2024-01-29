@@ -9,10 +9,12 @@ import SwiftUI
 
 struct Header: View {
     @Binding var showGuideView: Bool
+    
+    @State private var exitPath: Bool = false
     var body: some View {
     
             ZStack{
-                HStack (alignment: .center, spacing: 80){
+                HStack (alignment: .center){
         //            Button(action: {
         //
         //            }) {
@@ -27,7 +29,16 @@ struct Header: View {
         //                        }.accentColor(Color.black)
                     
               
-                    NavigationLink("Home",destination: ContentView()).navigationBarHidden(true).navigationBarTitle("")
+                    
+                    NavigationLink("",destination: ContentView(), isActive: $exitPath).navigationBarHidden(true).navigationBarTitle("")
+                    
+                    
+                    Button{
+                        self.exitPath.toggle()
+                    } label: {
+                        Image(systemName: "house.fill").font(.system(size: 24, weight: .regular)).accentColor(.black)
+                    }
+                    
                             
                     // change font or replace w logo
                     Text("WATway").frame(maxWidth: .infinity, alignment: .center).accentColor(Color.black).font(.largeTitle) .fontWeight(.bold)
@@ -37,7 +48,7 @@ struct Header: View {
                         //Action
                         self.showGuideView.toggle()
                     } label: {
-                        Image(systemName: "info.circle").font(.system(size: 20, weight: .regular))
+                        Image(systemName: "info.circle").font(.system(size: 24, weight: .regular))
                     }.accentColor(Color.black)
                         .sheet(isPresented: $showGuideView) {
                             GuideView()
