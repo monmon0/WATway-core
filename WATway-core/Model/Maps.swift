@@ -30,6 +30,7 @@ struct HamburgMenu: View {
     @State private var time = "0"
     
     @Binding var showGuideView: Bool
+//    @Binding var showStepView: Bool
     
     @State private var test1 = false
     @State private var test2 = false

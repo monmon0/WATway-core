@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050D93392B6ACAD2009752E3 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050D93382B6ACAD2009752E3 /* Steps.swift */; };
 		05925E3A2B677184008E7E22 /* EffectsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 05925E392B677184008E7E22 /* EffectsLibrary */; };
 		05C365EE2B6261BA00A1B2A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C365ED2B6261BA00A1B2A6 /* ContentView.swift */; };
 		05C365F02B6261BB00A1B2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C365EF2B6261BB00A1B2A6 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050D93382B6ACAD2009752E3 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
 		05C365E82B6261BA00A1B2A6 /* WATway-core.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WATway-core.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C365ED2B6261BA00A1B2A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../ContentView.swift; sourceTree = "<group>"; };
 		05C365EF2B6261BB00A1B2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				05C365FD2B62627A00A1B2A6 /* HomeView.swift */,
 				05C365FE2B62627A00A1B2A6 /* Maps.swift */,
 				05D4023A2B62D04500C47949 /* Directions.swift */,
+				050D93382B6ACAD2009752E3 /* Steps.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				050D93392B6ACAD2009752E3 /* Steps.swift in Sources */,
 				05C365FF2B62627A00A1B2A6 /* GuideView.swift in Sources */,
 				05D4023B2B62D04500C47949 /* Directions.swift in Sources */,
 				05C365EE2B6261BA00A1B2A6 /* ContentView.swift in Sources */,

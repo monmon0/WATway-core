@@ -13,6 +13,7 @@ struct Footer: View {
     @Binding var time: String
     
     @State private var openDirections: Bool = false
+    @State private var openSteps: Bool = false
     @State private var showView: Bool = false
     
 
@@ -44,8 +45,13 @@ struct Footer: View {
                 }.buttonStyle(.bordered)
                 
                 Spacer()
+                
+                NavigationLink("",destination: Steps(showView: $showView), isActive: $openSteps).navigationBarHidden(true).navigationBarTitle("")
+                
                 Button () {
-                    
+                    withAnimation{
+                        openSteps = true
+                    }
                 } label: {
                     Image(systemName: "figure.walk.circle.fill").font(.system(size: 34, weight: .regular))
                     Text("Steps")

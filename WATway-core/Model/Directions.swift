@@ -17,6 +17,7 @@ struct Directions: View {
     @State private var maxNum = 5
     @State private var time = 7
     @State private var exitPath: Bool = false
+    @State private var showSteps: Bool = false
     
     var body: some View {
         
@@ -46,9 +47,12 @@ struct Directions: View {
                                     Text("Exit Path").font(.title2)
                                 }.buttonStyle(.bordered).tint(.pink)
                                 
+                                NavigationLink("",destination: Steps(showView: $showView), isActive: $showSteps).navigationBarHidden(true).navigationBarTitle("")
                                 
                                 Button{
-                                    
+                                    withAnimation{
+                                        showSteps = true
+                                    }
                                 } label:{
                                     Image(systemName: "figure.walk.circle.fill").font(.system(size: 30, weight: .regular)).accentColor(.black)
                                     Text("Steps").font(.title2)
@@ -111,7 +115,7 @@ struct Directions: View {
                                                 i = i + 1
                                             }
                                         } label:{
-                                            Text("🤗 I'm Here! 🤗").bold().padding()
+                                            Text("⏰ Click to update time ").bold().padding()
                                         }.buttonStyle(.borderedProminent)
                                             .accentColor(Color.black).padding()
                                     }
