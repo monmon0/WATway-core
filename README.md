@@ -1,1 +1,1 @@
-Backend for WATway tunnel traverser app
+WATway tunnel traverser app
