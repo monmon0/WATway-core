@@ -1,0 +1,18 @@
+12
+mc-1 mc-2 45.2
+mc-1 mc-3 12.3
+mc-1 mc-4 10.4
+mc-2 mc-3 9.1
+mc-2 mc-4 34.0
+mc-3 mc-4 20.9
+mc-1 m3-1 13.7
+dc-1 dc-2 50.3
+dc-1 dc-3 45.2
+dc-2 dc-3 31.3
+dc-1 mc-2 56.4
+dc-2 mc-3 12.5
+4
+dc-1 mc
+dc-3 m3
+mc-1 m3
+dc-2 dc

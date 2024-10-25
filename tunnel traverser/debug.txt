@@ -1,0 +1,48 @@
+// this outputs the exits sorted by buildings
+/*
+for (auto e : db.buildings) {
+    cout << e.first << ": ";
+    for (string x : e.second) cout << x << " ";
+    cout << "\n";
+}
+ */
+/*
+// now we add extra unidirectional paths of length 0 from the building's "center" to its exits
+for (const auto& building : buildings) {
+    std::string building_center = building.first;
+    for (const std::string& exits : building.second) {
+        tunnels[building_center].push_back({exits, 0});
+    }
+}
+ */
+
+// the graph is fully complete at this point, stored in tunnels
+// idea 1: preprocess all connections between buildings and the shortest paths (floyd warshall algorithm)
+// https://cs.stackexchange.com/questions/50138/how-to-modify-floyd-warshall-algorithm-with-space-ov2-with-tracking-actual
+// set all distances to infinity first
+// check if output is correct
+/*
+for (const auto& e : db.shortest_distances) {
+    for (const auto& f : e.second) {
+        cout << e.first << " " << f.first << " " << f.second << "\n";
+    }
+}
+ */
+
+// check if pathfinding is correct
+/*
+for (const auto& e : nxt) {
+    for (const auto& f : e.second) {
+        cout << "nxt[from][to] = next_node: " << e.first << " " << f.first << " " << f.second << "\n";
+    }
+}
+ */
+
+ // check if the setup is correct
+         /*
+         for (const auto& e : shortest_distances) {
+             for (const auto& f : e.second) {
+                 cout << e.first << " " << f.first << " " << f.second << "\n";
+             }
+         }
+         */
