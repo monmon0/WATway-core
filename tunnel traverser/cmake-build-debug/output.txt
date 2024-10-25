@@ -1,0 +1,21 @@
+dc-1 -> mc-2 with distance 56.4
+overall distance: 56.4
+image of tunnel from dc-1:
+https://uwaterloo.ca/library/dc-entrance-and-after
+
+dc-3 -> dc-2 with distance 31.3
+dc-2 -> mc-3 with distance 12.5
+mc-3 -> mc-1 with distance 12.3
+mc-1 -> m3-1 with distance 13.7
+overall distance: 69.8
+image of tunnel from dc-2:
+https://uwaterloo.ca/computer-museum/
+image of tunnel from mc-1:
+https://www.flickr.com/photos/takashi/16040691848
+
+mc-1 -> m3-1 with distance 13.7
+overall distance: 13.7
+image of tunnel from mc-1:
+https://www.flickr.com/photos/takashi/16040691848
+
+at destination or no possible path

@@ -1,0 +1,15 @@
+Opened database successfully
+Enter addition query: 
+INSERT INTO TUNNELS (START, END, DIST) VALUES ('SLC-0', 'MC-9', '48');
+Successfully inserted into TUNNELS
+INSERT INTO TUNNELS (START, END, DIST) VALUES ('MC-9', 'SLC-0', '48');
+Successfully inserted into TUNNELS
+new connection created, inserted into tunnels.
+addition query complete.
+Enter addition query: 
+INSERT INTO TUNNELS (START, END, DIST) VALUES ('MC-1', 'DC-2', '40');
+Successfully inserted into TUNNELS
+INSERT INTO TUNNELS (START, END, DIST) VALUES ('DC-2', 'MC-1', '40');
+Successfully inserted into TUNNELS
+new connection created, inserted into tunnels.
+addition query complete.
