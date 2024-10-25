@@ -1,0 +1,3 @@
+C:/Users/guste/OneDrive/Documents/GitHub/WATway/tunnel traverser/cmake-build-debug/CMakeFiles/tunnel_traverser.dir
+C:/Users/guste/OneDrive/Documents/GitHub/WATway/tunnel traverser/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/guste/OneDrive/Documents/GitHub/WATway/tunnel traverser/cmake-build-debug/CMakeFiles/rebuild_cache.dir
